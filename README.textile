@@ -1,0 +1,30 @@
+h1. ShareThis Fu
+
+This plugin should help you easily and unobtrusively integrate ShareThis in your rails app.
+
+h2. Installation
+
+  script/plugin install git://github.com/uhlenbrock/sharethis_fu.git
+
+This should create sharethis.yml in your config directory. Add your publisher key as well as any widget customizations.
+
+h2. Usage
+
+There are three parts to the integration:
+
+*1. A javascript include tag in the head of your html layout*
+
+    <%= include_sharethis_if_needed %>
+
+*2. Declaration in controller of your choice*
+
+    uses_sharethis
+
+*3. Within the view where the button should appear*
+
+  <%= sharethis :entry => { :title => "Title to be shared.", :url => "http://www.sharethis.com/" } %>
+
+h2. TODO
+
+* Write more tests
+* Allow for further widget customization
