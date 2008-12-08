@@ -5,11 +5,11 @@ module SharethisFuHelper
   SharethisJSParams = [ :title, :url, :content, :icon, :summary, :updated, :published ]
   
   def sharethis(options = {})
-    # magic here
+    
   end
   
   def include_sharethis_js
-    javascript_include_tag 'http://w.sharethis.com/widget/'
+    javascript_include_tag 'http://w.sharethis.com/widget/?' + @sharethis_widget_config
   end
   
   def include_sharethis_if_needed
