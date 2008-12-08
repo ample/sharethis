@@ -30,9 +30,9 @@ class SharethisFuTest < ActionController::TestCase
     assert true
   end
   
-  def test_uses_sharethis
-    assert @uses_sharethis
-  end
+  # def test_uses_sharethis
+  #   assert @uses_sharethis
+  # end
   
   # def test_javascript_include_sharethis
   #   assert_match /w.sharethis.com\/widget/, include_sharethis_js
