@@ -1,0 +1,19 @@
+# ShareThis Configuration
+# http://www.sharethis.com/publisher?type=stapi
+
+sharethis:
+    publisher:
+    style:
+    services:
+    tabs:
+    embeds:
+    charset:
+    popups:
+    headerbg:
+	linkfg:
+	inactivebg:
+	inactivefg:
+	offsetLeft:
+	offsetTop:
+    ireg:
+    reg:
