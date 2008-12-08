@@ -1,5 +1,6 @@
 # ShareThis Configuration
 # http://www.sharethis.com/publisher?type=stapi
+# Be sure to quote hex colors (eg linkfg: "#336699")
 
 sharethis:
     publisher:
