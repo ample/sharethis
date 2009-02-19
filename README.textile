@@ -22,7 +22,7 @@ There are three parts to the integration:
 
 *3. Within the view where the button should appear*
 
-  <%= sharethis :entry => { :title => "Title to be shared.", :url => "http://www.sharethis.com/" } %>
+  <%= sharethis :title => "Title to be shared.", :url => "http://www.sharethis.com/" %>
 
 h2. TODO
 

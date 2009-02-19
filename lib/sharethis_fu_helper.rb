@@ -5,7 +5,7 @@ module SharethisFuHelper
   SharethisJSParams = [ :title, :url, :content, :icon, :summary, :updated, :published ]
   
   def sharethis(options = {})
-    entry = options[:entry].collect { |k,v| "#{k}:\"#{v}\"" if SharethisJSParams.include?(k) }.compact.join(';')
+    entry = options.collect { |k,v| "#{k}:\"#{v}\"" if SharethisJSParams.include?(k) }.compact.join(';')
     button = options[:button] || true
     <<-END
       <script type=\"text/javascript\">
