@@ -4,16 +4,15 @@
 
 sharethis:
     publisher:
-    style:
-    services:
-    tabs:
+    type:
+    post_services:
     embeds:
     charset:
     popups:
-    headerbg:
+	headerTitle:
+    headerfg:
+	headerbg:
 	linkfg:
-	inactivebg:
-	inactivefg:
 	offsetLeft:
 	offsetTop:
     ireg:

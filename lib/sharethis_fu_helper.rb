@@ -6,13 +6,15 @@ module SharethisFuHelper
   
   def sharethis(options = {})
     entry = options.collect { |k,v| "#{k}:\"#{escape_javascript(v)}\"" if SharethisJSParams.include?(k) }.compact.join(",\n")
-    button = options[:button] || true
-    onmouseover = options[:onmouseover] || true
+    options[:button] ||= 'true'
+    options[:onmouseover] ||= 'true'
+    attachment = options[:dom_id] ? "st_object.attachButton(document.getElementById('#{options[:dom_id]}'));" : ''
     <<-END
       <script type=\"text/javascript\">
-        SHARETHIS.addEntry({
+        var st_object = SHARETHIS.addEntry({
           #{entry}
-        },{button:#{button}, onmouseover:#{onmouseover}});
+        }, {button:#{options[:button]}, onmouseover:#{options[:onmouseover]}});
+        #{attachment}
       </script>
     END
   end
