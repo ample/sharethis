@@ -7,9 +7,10 @@ module SharethisFuHelper
   def sharethis(options = {})
     entry = options.collect { |k,v| "#{k}:\"#{v}\"" if SharethisJSParams.include?(k) }.compact.join(';')
     button = options[:button] || true
+    onmouseover = options[:onmouseover] || true
     <<-END
       <script type=\"text/javascript\">
-        SHARETHIS.addEntry({#{entry}},{button:#{button}});
+        SHARETHIS.addEntry({#{entry}},{button:#{button}, onmouseover:#{onmouseover}});
       </script>
     END
   end
