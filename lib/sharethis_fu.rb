@@ -13,7 +13,7 @@ module SharethisFu
     begin
       @@sharethis_config = YAML.load_file("#{RAILS_ROOT}/config/sharethis.yml").symbolize_keys[:sharethis]
     rescue
-      log.error "Config file not found, or your credentials are malformed"
+      RAILS_DEFAULT_LOGGER.error "Config file not found, or your credentials are malformed"
       exit
     end
     
