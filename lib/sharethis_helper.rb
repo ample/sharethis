@@ -8,7 +8,7 @@ module SharethisHelper
   
   def sharethis(options = {})
     entry = options.collect { |k,v| "st_#{k}=\"#{escape_javascript(v)}\"" if SharethisJSParams.include?(k) }.compact.join(" ")
-    %{<span class="st_sharethis" #{entry} displayText="ShareThis"></span>"}.html_safe
+    %{<span class="st_sharethis" #{entry} displayText="ShareThis"></span>}.html_safe
   end
   
   def sharethis_js(options = {})
