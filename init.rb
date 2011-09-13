@@ -1,2 +1,2 @@
-require 'sharethis_fu'
-ActionController::Base.send(:include, SharethisFu)
+require 'sharethis'
+ActionController::Base.send(:include, Sharethis)

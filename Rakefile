@@ -1,22 +1,9 @@
-require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the sharethis_fu plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
+Rake::TestTask.new do |t|
+  t.libs << 'lib' << 'test'
+  t.test_files = Dir.glob("test/**/*_test.rb")
   t.verbose = true
 end
 
-desc 'Generate documentation for the sharethis_fu plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'sharethis_fu'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README.textile')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
+task :default => :test

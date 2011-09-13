@@ -1,10 +1,10 @@
-h1. ShareThis Fu
+h1. ShareThis
 
 This plugin should help you easily and unobtrusively integrate ShareThis in your rails app.
 
 h2. Installation
 
-  script/plugin install git://github.com/uhlenbrock/sharethis_fu.git
+  rails plugin install git://github.com/ample/sharethis.git
 
 This should create sharethis.yml in your config directory. Add your publisher key as well as any widget customizations.
 
@@ -12,9 +12,9 @@ h2. Usage
 
 There are three parts to the integration:
 
-*1. A javascript include tag in the head of your html layout*
+*1. A javascript include tag before the </body> of your html layout*
 
-    <%= include_sharethis_if_needed %>
+    <%= raw include_sharethis_if_needed %>
 
 *2. Declaration in controller of your choice*
 

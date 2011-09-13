@@ -1,20 +1,13 @@
 # ShareThis Configuration
-# http://www.sharethis.com/publisher?type=stapi
+# http://help.sharethis.com/customization/dynamic-buttons
 # Be sure to quote hex colors (eg linkfg: "#336699")
 
 sharethis:
-    publisher:
-    type:
-    post_services:
-    embeds:
-    charset:
-    popups:
-	headerTitle:
-    headerfg:
-	headerbg:
-	linkfg:
-	offsetLeft:
-	offsetTop:
-    ireg:
-    reg:
-    onmouseover:
+  publisher: '123'
+  tracking: 'google'
+  doneScreen: true
+  onhover: false
+  embeds: false
+  headerTitle: false
+  headerbg: '#CCCCCC'
+  headerfg: '#FFFFFF'
