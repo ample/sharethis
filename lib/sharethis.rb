@@ -12,9 +12,9 @@ module Sharethis
     
     begin
       @@sharethis_config = YAML.load_file("#{Rails.root}/config/sharethis.yml").symbolize_keys[:sharethis]
-    # rescue
-    #   Rails.logger.error "Config file not found, or your credentials are malformed, see #{Rails.root}/config/sharethis.yml"
-    #   exit
+    rescue
+      Rails.logger.error "Config file not found, or your credentials are malformed, see #{Rails.root}/config/sharethis.yml"
+      exit
     end
     
     def uses_sharethis(options = {})
