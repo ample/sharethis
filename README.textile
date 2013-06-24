@@ -4,7 +4,7 @@ This plugin should help you easily and unobtrusively integrate ShareThis in your
 
 h2. Installation
 
-  rails plugin install git://github.com/ample/sharethis.git
+  <code>$ rails plugin install git://github.com/ample/sharethis.git</code>
 
 This should create sharethis.yml in your config directory. Add your publisher key as well as any widget customizations.
 
@@ -12,17 +12,18 @@ h2. Usage
 
 There are three parts to the integration:
 
-*1. A javascript include tag before the </body> of your html layout*
+1. A javascript include tag before the <code></body></code> of your html layout*
 
-    <%= raw include_sharethis_if_needed %>
+    <code><%= raw include_sharethis_if_needed %></code>
 
-*2. Declaration in controller of your choice*
+2. Declaration in controller of your choice*
 
-    uses_sharethis
+    <code>uses_sharethis</code>
 
-*3. Within the view where the button should appear*
+3. Within the view where the button should appear*
 
-  <%= sharethis :title => "Title to be shared.", :url => "http://www.sharethis.com/" %>
+  <code><%= sharethis :title => "Title to be shared.", :url => "http://www.sharethis.com/" %></code>
+
 
 h2. TODO
 
